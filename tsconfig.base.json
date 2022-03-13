@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@myorg/auth": ["libs/auth/src/index.ts"],
+      "@myorg/data": ["libs/data/src/index.ts"],
+      "@myorg/libs/test": ["libs/libs/test/src/index.js"],
+      "@myorg/tester": ["libs/tester/src/index.js"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

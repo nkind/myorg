@@ -1,0 +1,32 @@
+{
+  "root": "libs/tester",
+  "sourceRoot": "libs/tester/src",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/tester",
+        "main": "libs/tester/src/index.js",
+        "tsConfig": "libs/tester/tsconfig.lib.json",
+        "assets": ["libs/tester/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/tester/**/*.js"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/tester"],
+      "options": {
+        "jestConfig": "libs/tester/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

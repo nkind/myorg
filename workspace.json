@@ -1,6 +1,9 @@
 {
   "version": 2,
   "projects": {
+    "auth": "libs/auth",
+    "data": "libs/data",
+    "tester": "libs/tester",
     "todos": "apps/todos"
   }
 }
